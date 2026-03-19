@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nigerian Job Aggregator Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>body { background: #0f172a; color: white; }</style>
+</head>
+<body class="p-8">
+  <h1 class="text-4xl font-bold mb-8">Nigerian Job Aggregator Dashboard</h1>
+  <div class="grid grid-cols-3 gap-6">
+    <div class="bg-zinc-800 p-6 rounded-xl">Total Jobs: <span class="text-3xl">{{ stats.total_jobs }}</span></div>
+    <div class="bg-zinc-800 p-6 rounded-xl">Companies: {{ stats.companies }}</div>
+  </div>
+
+  <a href="/scrape" class="mt-8 inline-block bg-green-600 hover:bg-green-500 px-8 py-4 rounded-xl text-xl">Scrape Fresh Jobs</a>
+  <a href="/data/jobs.csv" class="ml-4 inline-block bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-xl text-xl">Download CSV</a>
+</body>
+</html>
